@@ -5,7 +5,7 @@ package com.example.datastructre
  */
 
 /* Java program for Merge Sort */
- class MergeSort {
+internal class MergeSort {
     // Merges two subarrays of arr[].
     // First subarray is arr[l..m]
     // Second subarray is arr[m+1..r]
@@ -18,7 +18,8 @@ package com.example.datastructre
         val L = IntArray(n1)
         val R = IntArray(n2)
 
-        /*Copy data to temp arrays*/for (i in 0 until n1) L[i] = arr[l + i]
+        /*Copy data to temp arrays*/
+        for (i in 0 until n1) L[i] = arr[l + i]
         for (j in 0 until n2) R[j] = arr[m + 1 + j]
 
         /* Merge the temp arrays */
@@ -90,3 +91,4 @@ package com.example.datastructre
         }
     }
 }
+/* This code is contributed by Rajat Mishra */

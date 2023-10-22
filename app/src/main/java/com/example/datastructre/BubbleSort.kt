@@ -67,7 +67,7 @@ fun bubbleSortWithSteps(numbers: IntArray) {
 }
 
 fun main(args: Array<String>) {
-    val numbers = takeInput()
+    val numbers = intArrayOf(21, 21,2,1,32,25)
 
     bubbleSort(numbers)
 
