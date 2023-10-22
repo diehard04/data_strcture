@@ -1,4 +1,4 @@
-package com.ltts.ott.utils.test
+package com.example.datastructre.test
 
 /**
  * Created by Dipak Kumar Mehta on 10/25/2022.
@@ -22,7 +22,7 @@ fun main(args:Array<String>) {
     val tile2 = Red("Fire", 40)
     println("${tile.point} - ${tile.type}")
     */
-    val tile:Tile = Red("Mushroom", 30)
+    val tile: Tile = Red("Mushroom", 30)
     val point:Int = when(tile) {
         is Blue -> tile.point * 2
         is Red -> tile.point * 4
@@ -32,8 +32,8 @@ fun main(args:Array<String>) {
 }
 
 sealed class Tile
-class Red(val type:String, val point:Int):Tile()
-class Blue(val point:Int):Tile()
+class Red(val type:String, val point:Int): Tile()
+class Blue(val point:Int): Tile()
 
 
 
