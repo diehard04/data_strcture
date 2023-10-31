@@ -9,9 +9,8 @@ fun main() {
 class MyClass{
     // one class only one companion can define
     companion object {
-        fun f() {
-            println("Hello I am F from Object")
-        }
+        fun f() = println("Hello I am F from Object")
+
     }
 
     object AnotherObject{
