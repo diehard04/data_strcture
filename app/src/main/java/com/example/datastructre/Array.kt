@@ -10,4 +10,5 @@ fun main(array:Array<String>) {
     for (i in intArray.iterator().withIndex()) {
         println(" index ${i.index} value ${i.value}")
     }
+
 }
