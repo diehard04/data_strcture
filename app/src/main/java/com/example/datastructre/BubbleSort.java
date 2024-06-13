@@ -6,7 +6,7 @@ import java.util.Arrays;
  */
 
 // Bubble sort in Java
-class BubbleSort {
+class BubbleSorta {
 
     public static void main(String args[]) {
 
