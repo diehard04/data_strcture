@@ -1,4 +1,4 @@
-package com.example.datastructre.chezycodes.sealed
+package com.example.datastructre.kotlinconcepts.sealed
 
 /**
  * a sealed class is used to represent a restricted class hierarchy,
@@ -8,19 +8,25 @@ package com.example.datastructre.chezycodes.sealed
 /**
  * 1st example
  */
-sealed class SealedResult {
-    data class Success(val data:SealedModel):SealedResult()
-    data class Fail(val message:String) :SealedResult()
+sealed class Result {
+    data class Success(val data:SealedModel):Result()
+    data class Fail(val message:String) :Result()
+
+    object Loading : Result()
+
 }
 
 
-fun handleResult(sealedResult: SealedResult) {
-    when(sealedResult) {
-        is SealedResult.Success ->
-            println(sealedResult.data.name)
+fun handleResult(result: Result) {
+    when(result) {
+        is Result.Success ->
+            println(result.data.name)
 
-        is SealedResult.Fail ->
-            println(sealedResult.message)
+        is Result.Fail ->
+            println(result.message)
+
+        is Result.Loading ->
+            println(result)
     }
 }
 
@@ -45,7 +51,7 @@ fun describeShape(shape: Shape): String {
 }
 
 fun main() {
-    handleResult(SealedResult.Fail("failed"))
+    handleResult(Result.Fail("failed"))
 
     val circle = Shape.Circle(5.0)
     val rectangle = Shape.Rectangle(3.0, 4.0)
@@ -55,3 +61,4 @@ fun main() {
     println(describeShape(rectangle))    // Output: A rectangle with height 3.0 and width 4.0
     println(describeShape(notAShape))    // Output: Not a shape
 }
+

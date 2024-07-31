@@ -1,32 +1,23 @@
-package com.example.datastructre.chezycodes
+package com.example.datastructre.kotlinconcepts.sealed
 
 sealed class CollegeSealedClass {
 
-    abstract fun setStream()
+    abstract fun makeBranch()
 }
 
 class CS: CollegeSealedClass() {
 
-    override fun setStream() {
+    override fun makeBranch() {
         println("This is Computer Science")
     }
 }
 
 class IT: CollegeSealedClass() {
-    override fun setStream() {
+    override fun makeBranch() {
         println("This is IT")
     }
 }
 
-fun main() {
-    val cs = CollegeFactory.createBranch("A")
-
-    val IT = CollegeFactory.createBranch("B")
-
-    val EC = CollegeFactory.createBranch("EC") // it will return null
-
-
-}
 object CollegeFactory {
     fun createBranch(stream:String) : CollegeSealedClass? {
         return when(stream) {
@@ -38,4 +29,11 @@ object CollegeFactory {
 }
 
 
+/**
+ * With this definition, we can create different types of Branches by calling the createBranch method with the appropriate type, like this:
+ */
 
+fun main() {
+    val cs = CollegeFactory.createBranch("A")
+    val IT = CollegeFactory.createBranch("B")
+}

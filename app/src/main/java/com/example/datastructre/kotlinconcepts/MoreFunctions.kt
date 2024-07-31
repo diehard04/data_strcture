@@ -1,7 +1,6 @@
-package com.example.datastructre.chezycodes
+package com.example.datastructre.kotlinconcepts
 
 import kotlin.math.pow
-import kotlin.reflect.KFunction2
 
 fun main () {
     var fn: (a: Double, b: Double) -> Double  = ::addition

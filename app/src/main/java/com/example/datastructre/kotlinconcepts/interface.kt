@@ -1,4 +1,4 @@
-package com.example.datastructre.chezycodes
+package com.example.datastructre.kotlinconcepts
 
 /*
 fun main() {
